@@ -45,13 +45,13 @@ while true; do
 		((date_count++))
 	fi
 
-	#for the battery portion of the string. This is every 3 minutes
-	if (( battery_count==180 )); then
-		"${scripts_dir}/update_battery.sh"
-		battery_count=1
-	else
-		((battery_count++))
-	fi
+	##for the battery portion of the string. This is every 3 minutes
+	#if (( battery_count==180 )); then
+	#	"${scripts_dir}/update_battery.sh"
+	#	battery_count=1
+	#else
+	#	((battery_count++))
+	#fi
 
 	##for the volume portion of the string this check once every 10 hours
 	#if (( volume_count==36000 )); then
