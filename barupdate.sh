@@ -1,5 +1,6 @@
 #status bar loop
 
+scripts_dir="/home/denis/.local/bin/DWM_Scripts"
 #for cpu use
 declare -i cpu_count=1
 
@@ -38,7 +39,7 @@ while true; do
 
 	#for the date portion of the string every minute
 	if (( date_count==60 )); then
-		"/home/john/.scripts/dwm/update_date.sh"
+		"${scripts_dir}/update_date.sh"
 		date_count=1
 	else
 		((date_count++))
@@ -46,51 +47,51 @@ while true; do
 
 	#for the battery portion of the string. This is every 3 minutes
 	if (( battery_count==180 )); then
-		"/home/john/.scripts/dwm/update_battery.sh"
+		"${scripts_dir}/update_battery.sh"
 		battery_count=1
 	else
 		((battery_count++))
 	fi
 
-	#for the volume portion of the string this check once every 10 hours
-	if (( volume_count==36000 )); then
-		"/home/john/.scripts/dwm/update_volume.sh"
-		volume_count=1
-	else
-		((volume_count++))
-	fi
+	##for the volume portion of the string this check once every 10 hours
+	#if (( volume_count==36000 )); then
+	#	"${scripts_dir}/update_volume.sh"
+	#	volume_count=1
+	#else
+	#	((volume_count++))
+	#fi
 
-	#for the internet portion of the string. this checks every 5 secs
-	if (( internet_status_count==5 )); then
-		"/home/john/.scripts/dwm/update_internet_status.sh"
-		internet_status_count=1
-	else
-		((internet_status_count++))
-	fi
+	##for the internet portion of the string. this checks every 5 secs
+	#if (( internet_status_count==5 )); then
+	#	"${scripts_dir}/update_internet_status.sh"
+	#	internet_status_count=1
+	#else
+	#	((internet_status_count++))
+	#fi
 
-	#for the current brightness level. this check is every 10 hours
-	if (( bright_count==36000 )); then
-		"/home/john/.scripts/dwm/update_brightness.sh"
-		bright_count=1
-	else
-		((bright_count++))
-	fi
+	##for the current brightness level. this check is every 10 hours
+	#if (( bright_count==36000 )); then
+	#	"${scripts_dir}/update_brightness.sh"
+	#	bright_count=1
+	#else
+	#	((bright_count++))
+	#fi
 
-	#for the weather report by location. this checks every 2 minutes
-	if (( weather_count==1800 )); then
-		"/home/john/.scripts/dwm/update_weather.sh"
-		weather_count=1
-	else
-		((weather_count++))
-	fi
+	##for the weather report by location. this checks every 2 minutes
+	#if (( weather_count==1800 )); then
+	#	"${scripts_dir}/update_weather.sh"
+	#	weather_count=1
+	#else
+	#	((weather_count++))
+	#fi
 
-	#for the disk use in the / and home paritions, runs every 3 minutes
-	if (( disk_use_count==180 )); then
-		"/home/john/.scripts/dwm/update_disk_use.sh"
-		disk_use_count=1
-	else
-		((disk_use_count++))
-	fi
+	##for the disk use in the / and home paritions, runs every 3 minutes
+	#if (( disk_use_count==180 )); then
+	#	"${scripts_dir}/update_disk_use.sh"
+	#	disk_use_count=1
+	#else
+	#	((disk_use_count++))
+	#fi
 
-	sleep 1s #make the thread sleep for 1 second
+	#sleep 1s #make the thread sleep for 1 second
 done

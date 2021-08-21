@@ -1,3 +1,5 @@
+scripts_dir="/home/denis/.local/bin/DWM_Scripts"
+
 function battery_update {
 	battery_level="$(cat /sys/class/power_supply/BAT0/capacity)"
 	# 0-10   , 11-30   , 31-50   , 51-75   , 76-100 
@@ -22,8 +24,8 @@ function battery_update {
 		battery_string+=""
 	fi
 
-	echo $battery_string | tee ~/.scripts/dwm/savedata/battery_string.txt
-	"/home/john/.scripts/dwm/update_all.sh"
+	echo $battery_string | tee ${scripts_dir}/savedata/battery_string.txt
+	"${scripts_dir}/update_all.sh"
 }
 
 battery_update
