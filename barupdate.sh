@@ -1,6 +1,19 @@
 #status bar loop
 
+# script dir
 scripts_dir="/home/denis/.local/bin/DWM_Scripts"
+
+# load all modules
+. "${scripts_dir}/modules/update_date.sh"
+. "${scripts_dir}/modulesupdate_battery.sh"
+. "${scripts_dir}/modules/update_volume.sh"
+. "${scripts_dir}/modules/update_cuse.sh"
+. "${scripts_dir}/modules/update_brightness.sh"
+. "${scripts_dir}/modules/update_disk_use.sh"
+. "${scripts_dir}/modules/update_internet_status.sh"
+. "${scripts_dir}/modules/update_volume.sh"
+. "${scripts_dir}/modules/update_weather.sh"
+
 #for cpu use
 declare -i cpu_count=1
 
