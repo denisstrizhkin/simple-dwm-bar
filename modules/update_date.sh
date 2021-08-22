@@ -1,9 +1,9 @@
-scripts_dir="/home/denis/.local/bin/DWM_Scripts"
+#!/bin/bash
 
-function date_update {
-	date_string="$( date +"%d(%A).%m(%B).%y|%H:%M") "
-	echo $date_string | tee ./savedata/date_string.txt
-	"./update_all.sh"
+update_date () {
+	# get date in specific format 
+	date_string="$(date +"%d(%A).%m(%B).%y|%H:%M")"
+	
+	# return it
+	printf "$date_string"
 }
-
-date_update
