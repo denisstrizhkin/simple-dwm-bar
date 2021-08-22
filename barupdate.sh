@@ -5,6 +5,7 @@ scripts_dir="/home/denis/.local/bin/DWM_Scripts"
 
 # load all modules
 . "${scripts_dir}/modules/update_date.sh"
+. "${scripts_dir}/modules/update_cpu.sh"
 #. "${scripts_dir}/modules/update_battery.sh"
 #. "${scripts_dir}/modules/update_volume.sh"
 #. "${scripts_dir}/modules/update_cuse.sh"
@@ -24,6 +25,7 @@ while true; do
 	#final_string="$final_string$(update_brightness)"
 	#final_string="$final_string$(update_internet_status)"
 	#final_string="$final_string$(update_weather)"
+	final_string="$final_string$(update_cpu)|"
 	final_string="$final_string$(update_date)"
 
 	# upload status string
