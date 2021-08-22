@@ -6,7 +6,7 @@ function update_weather {
 	temp=$(curl -s wttr.in/$place?format=%t)
 
 	# format and return
-	printf "%5s" $temp	
+	printf "W:%5s" $temp	
 }
 
 update_weather
