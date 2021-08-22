@@ -5,7 +5,7 @@ update_cpu () {
 	cpu_data="$(top -bn1 | grep Cpu | awk '{print $2}')"
 	
 	# format and return
-	printf "CPU:%5.1f%%" $cpu_data
+	printf "C:%5.1f%%" $cpu_data
 }
 
 update_cpu

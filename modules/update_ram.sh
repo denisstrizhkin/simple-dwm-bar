@@ -7,7 +7,7 @@ update_ram () {
 	ram_used=$(echo $ram_data | awk '{print $3}')
 
 	# format and return
-	printf "RAM:%5s/%5s" $ram_used $ram_all
+	printf "M:%5s/%5s" $ram_used $ram_all
 }
 
 update_ram
