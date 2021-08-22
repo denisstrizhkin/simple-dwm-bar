@@ -1,2 +1,2 @@
-# DWM_Scripts
-My noob scripts. Things can definitely be done better ;)
+# simple-dwm-bar
+simplified version of https://github.com/joestandring/dwm-bar
