@@ -1,2 +1,3 @@
 # simple-dwm-bar
-simplified version of https://github.com/joestandring/dwm-bar
+really simple dwm status bar
+inspired by https://github.com/joestandring/dwm-bar
