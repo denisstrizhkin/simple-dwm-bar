@@ -1,3 +1,4 @@
 # simple-dwm-bar
-really simple dwm status bar
-inspired by https://github.com/joestandring/dwm-bar
+Really simple dwm status bar
+
+Inspired by https://github.com/joestandring/dwm-bar
