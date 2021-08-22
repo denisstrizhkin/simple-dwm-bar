@@ -1,11 +1,11 @@
 #!/bin/bash
 
 update_cpu () {
-	# get date in specific format 
-	cpu_string="CPU:$(top -bn1 | grep Cpu | awk '{print $2}')"
+	# get cpu usage
+	cpu_data="$(top -bn1 | grep Cpu | awk '{print $2}')"
 	
-	# return it
-	printf "$cpu_string"
+	# format and return
+	printf "CPU:%5.1f%%" $cpu_data
 }
 
 update_cpu
