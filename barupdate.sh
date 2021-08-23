@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # script dir
-scripts_dir="/home/denis/.local/bin/DWM_Scripts"
+scripts_dir="/home/denis/.local/bin/simple-dwm-bar"
 
 # load all modules
 . "${scripts_dir}/modules/update_date.sh"
