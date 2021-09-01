@@ -2,12 +2,15 @@
 
 update_ram () {
 	# get cpu usage
-	ram_data=$(free -h | grep Mem)
-	ram_all=$(echo $ram_data | awk '{print $2}')
-	ram_used=$(echo $ram_data | awk '{print $3}')
-
+	ram_data=$(free | grep Mem: | awk '{print $3/$2*100}')
+	
 	# format and return
-	printf "M:%5s/%5s" $ram_used $ram_all
+	if (( $(echo "$ram_data < 10.0" |bc -l) ))
+	then
+		printf " %1.1f" $ram_data
+	else
+		printf " %3.0f" $ram_data
+	fi
 }
 
 update_ram

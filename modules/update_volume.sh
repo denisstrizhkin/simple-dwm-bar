@@ -3,7 +3,7 @@ function update_volume {
 	volume=$(pulsemixer --get-volume | awk '{print $1}')
 
 	# format and return
-	printf "V:%3s%%" $volume
+	printf " %3s" $volume
 }
 
 update_volume

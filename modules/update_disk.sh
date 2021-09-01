@@ -1,9 +1,9 @@
 function update_disk {
 	# get disk used percent
-	disk_used=$(df -h | grep /$ | awk '{print $5}')
+	disk_used=$(df | grep /$ | awk '{print $3/($3+$4)*100}')
 
 	# format and return
-	printf "D:%4s" $disk_used
+	printf " %3.0f" $disk_used
 }
 
 update_disk
