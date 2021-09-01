@@ -3,10 +3,10 @@ function update_weather {
 	place="Saint-Petersburg"
 
 	# get temperature for specified location
-	temp=$(curl -s wttr.in/$place?format=%t)
+	temp=$(curl -s wttr.in/$place?format=%t | sed 's/..$//')
 
 	# format and return
-	printf "W:%5s" $temp	
+	printf " %3s" $temp	
 }
 
 update_weather
