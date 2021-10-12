@@ -20,12 +20,12 @@ while true; do
 	final_string="|"	
 	final_string="$final_string$(update_battery)|"
 	final_string="$final_string$(update_brightness)|"
-	final_string="$final_string$(update_volume)|"
+	#final_string="$final_string$(update_volume)|"
 	final_string="$final_string$(update_keyboard)|"
-	final_string="$final_string$(update_disk)|"
+	#final_string="$final_string$(update_disk)|"
 	final_string="$final_string$(update_ram)|"
 	final_string="$final_string$(update_cpu)|"
-	final_string="$final_string$(update_weather)|"
+	#final_string="$final_string$(update_weather)|"
 	final_string="$final_string$(update_date)"
 
 	# upload status string
