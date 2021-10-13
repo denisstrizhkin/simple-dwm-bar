@@ -3,7 +3,7 @@ function update_battery {
 	bat_level=$(cat /sys/class/power_supply/BAT1/capacity)
 
 	# format and return
-	printf " %3s" $bat_level
+	printf "b %3s" $bat_level
 }
 
 update_battery

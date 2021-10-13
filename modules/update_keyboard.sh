@@ -10,7 +10,7 @@ update_keyboard () {
 	fi
 
 	# format and return
-	printf " %2s" $keyboard_data
+	printf "k %2s" $keyboard_data
 }
 
 update_keyboard

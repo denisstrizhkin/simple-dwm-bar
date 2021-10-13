@@ -3,7 +3,7 @@ update_brightness () {
 	brightness_data=$(xbacklight -get)
 
 	# return and format
-	printf " %3s" $brightness_data
+	printf "l %3s" $brightness_data
 }
 
 update_brightness

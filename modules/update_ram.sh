@@ -7,9 +7,9 @@ update_ram () {
 	# format and return
 	if (( $(echo "$ram_data < 10.0" |bc -l) ))
 	then
-		printf " %1.1f" $ram_data
+		printf "r %1.1f" $ram_data
 	else
-		printf " %3.0f" $ram_data
+		printf "r %3.0f" $ram_data
 	fi
 }
 
